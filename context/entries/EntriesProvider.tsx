@@ -13,28 +13,21 @@ const Entries_INITIAL_STATE: EntriesState = {
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       status: "pending",
-      createdAt: Date.now(),
+      createdAt: 1674154355069,
     },
     {
       _id: uuidv4(),
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      status: "pending",
-      createdAt: Date.now(),
-    },
-    {
-      _id: uuidv4(),
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "InProgress: Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       status: "in-progress",
-      createdAt: Date.now() - 1000000,
+      createdAt: 1674154355069 - 1000000,
     },
     {
       _id: uuidv4(),
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Finisihed: Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       status: "finished",
-      createdAt: Date.now() - 100000,
+      createdAt: 1674154355069 - 100000,
     },
   ],
 };
@@ -47,9 +40,7 @@ const EntriesProvider: FC<EntriesProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(entriesReducer, Entries_INITIAL_STATE);
 
   return (
-    <EntriesContext.Provider value={{ entries: [] }}>
-      {children}
-    </EntriesContext.Provider>
+    <EntriesContext.Provider value={state}>{children}</EntriesContext.Provider>
   );
 };
 
