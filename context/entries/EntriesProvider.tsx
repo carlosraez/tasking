@@ -11,7 +11,7 @@ const Entries_INITIAL_STATE: EntriesState = {
     {
       _id: uuidv4(),
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Pending: Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       status: "pending",
       createdAt: 1674154355069,
     },

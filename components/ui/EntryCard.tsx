@@ -24,7 +24,9 @@ export const EntryCard: FC<Props> = ({ entry }) => {
         <CardActions
           sx={{ display: "flex", justifyContent: "end", paddingRight: 2 }}
         >
-          <Typography variant="body2">{entry.createdAt}</Typography>
+          <Typography variant="body2">
+            {new Date(entry.createdAt).toLocaleString()}
+          </Typography>
         </CardActions>
       </CardActionArea>
     </Card>

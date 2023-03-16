@@ -28,7 +28,12 @@ export const EntryList: FC<Props> = ({ status }) => {
       >
         <List sx={{ opacity: 1 }}>
           {entriesByStatus.map((entry) => (
-            <EntryCard key={entry._id} entry={entry} />
+            <>
+              <EntryCard key={entry._id} entry={entry} />
+              <EntryCard key={entry._id} entry={entry} />
+              <EntryCard key={entry._id} entry={entry} />
+              <EntryCard key={entry._id} entry={entry} />
+            </>
           ))}
         </List>
       </Paper>
