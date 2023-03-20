@@ -30,9 +30,6 @@ export const EntryList: FC<Props> = ({ status }) => {
           {entriesByStatus.map((entry) => (
             <>
               <EntryCard key={entry._id} entry={entry} />
-              <EntryCard key={entry._id} entry={entry} />
-              <EntryCard key={entry._id} entry={entry} />
-              <EntryCard key={entry._id} entry={entry} />
             </>
           ))}
         </List>
